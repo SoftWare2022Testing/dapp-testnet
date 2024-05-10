@@ -3677,7 +3677,7 @@
 
             const tokenABI = tokenABIERC4626;
 
-			const contract = new web3.eth.Contract(tokenABI, tokenContractAddress);
+			const contract = new web3.eth.Contract(tokenABI, contractAddress);
 
             try {
                 const receipt = await contract.methods.deposit(assets, receiverAddress).send({from: account});
@@ -3708,7 +3708,7 @@
 
             const tokenABI = tokenABIERC4626;
 
-			const contract = new web3.eth.Contract(tokenABI, tokenContractAddress);
+			const contract = new web3.eth.Contract(tokenABI, contractAddress);
 
             try {
                 const receipt = await contract.methods.mint(assets, receiverAddress).send({from: account});
@@ -3739,7 +3739,7 @@
 
             const tokenABI = tokenABIERC4626;
 
-			const contract = new web3.eth.Contract(tokenABI, tokenContractAddress);
+			const contract = new web3.eth.Contract(tokenABI, contractAddress);
 
             try {
                 const receipt = await contract.methods.withdraw(assets, receiverAddress, account).send({from: account});
@@ -3770,7 +3770,7 @@
 
             const tokenABI = tokenABIERC4626;
 
-			const contract = new web3.eth.Contract(tokenABI, tokenContractAddress);
+			const contract = new web3.eth.Contract(tokenABI, contractAddress);
 
             try {
                 const receipt = await contract.methods.redeem(assets, receiverAddress, account).send({from: account});
@@ -4206,6 +4206,7 @@
     <br>
     <button onclick="redeemSharesERC4266()">ERC4626 Redeem Shares</button>
     <br>
+	<!--  -->
     <br>
     <button onclick="signTransactionData()">Eth Sign</button>
     <br>
