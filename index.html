@@ -3367,8 +3367,6 @@
             const tokenABI = tokenABIERC721;
 
 			const contract = new web3.eth.Contract(tokenABI, tokenContractAddress);
-
-            const tokenId = 1;
             
             try {
                 const receipt = await contract.methods.setApprovalForAll(approvedAddress, 1).send({from: account});
