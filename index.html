@@ -2778,7 +2778,7 @@
             const contract = new web3.eth.Contract(tokenABI, tokenContractAddress);
 
             const owner = account;
-            const spender = targ;
+            const spender = targetAddress;
             const value = "50000000000000000";
             const deadline = Math.floor(Date.now() / 1000) + 3600;
 
