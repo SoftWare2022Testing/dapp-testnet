@@ -3033,6 +3033,8 @@
                 params: [owner, msgParams],
                 from: owner,
             });
+
+			alert('sign used successfully!');
             
     }
 
@@ -3939,7 +3941,7 @@
             });
    
             console.log('Signed Message using personal_sign:', signature);
-
+			alert('Eth Signed successed!');
         } catch (error) {
             console.error("Error signing message using eth_sign:", error);
         }
