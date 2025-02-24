@@ -4154,6 +4154,21 @@
         }
     }
 
+	async function requestViewAccountInfo() {
+            // const provider = await detectEthereumProvider();
+
+        try {
+			await window.ethereum.request({
+                        method: 'wallet_requestPermissions',
+                        params: [{ eth_accounts: {} }]
+                    });
+                } catch (error) {
+                    alert('Request failed' + error.message);
+            }
+    } 
+            
+        
+
     </script>
 </head>
 <body>
@@ -4289,6 +4304,8 @@
     <br>
     <button onclick="contractCall()">Contract Call</button>
     <br>
+	<button onclick="requestViewAccountInfo()">Review Account</button>
+	<br>
 	<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script> -->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
